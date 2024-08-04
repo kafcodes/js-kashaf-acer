@@ -43,14 +43,42 @@ const myFunction = function (){
     
 }
 
-console.log(typeof myFunction); // gave 'function' but apparently it's object function
+//console.log(typeof myFunction); // gave 'function' but apparently it's object function
 //console.log(typeof myObj);
 
-console.log(typeof heroes); // gave 'object' 
+//console.log(typeof heroes); // gave 'object' 
 // he said: all the non-primitive ones have 'function', but function itself returns 'object function'
 
-console.log(typeof id); // symbol ofc
+//console.log(typeof id); // symbol ofc
 
-console.log(typeof myObj); // object
+//console.log(typeof myObj); // object
 
-console.log(typeof outsideTemp); // 'null' object 
+//console.log(typeof outsideTemp); // 'null' object 
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++
+
+// stack (primitive) changes in copies
+// Heap (non-primitive) changes in original values- cuz the ref is same
+
+
+let myYoutubename = "kashaffatima.com"
+
+let anothername = myYoutubename
+anothername = "fatimakash.com"
+console.log(anothername);
+console.log(myYoutubename);
+
+let userOne = {
+    email: "user@yahoo.com"
+}
+
+//let userTwo = userOne
+
+let userTwo = {
+    email: "kashaf@google.com"
+}
+
+console.log(userOne.email);
+console.log(userTwo.email);
+// but like- when we do not equate the two- it doesn't give the same reference email 
